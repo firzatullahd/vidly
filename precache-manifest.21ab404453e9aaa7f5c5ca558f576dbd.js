@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "3328271d8a9b4561159a2e57a870479a",
+    "revision": "4f32ca2b7d8672e6777a2cbbac80a622",
     "url": "/vidly/index.html"
   },
   {
