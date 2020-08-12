@@ -20,31 +20,31 @@ const NavBar = ({ user }) => {
       </button>
       <div className="collapse navbar-collapse" id="navbarNavAltMarkup">
         <div className="navbar-nav">
-          <NavLink className="nav-item nav-link active" to="/vidly/movies">
+          <NavLink className="nav-item nav-link active" to="/movies">
             Movies <span className="sr-only">(current)</span>
           </NavLink>
-          <NavLink className="nav-item nav-link" to="/vidly/customers">
+          <NavLink className="nav-item nav-link" to="/customers">
             Customers
           </NavLink>
-          <NavLink className="nav-item nav-link" to="/vidly/rentals">
+          <NavLink className="nav-item nav-link" to="/rentals">
             Rentals
           </NavLink>
           {!user && (
             <React.Fragment>
-              <NavLink className="nav-item nav-link" to="/vidly/login">
+              <NavLink className="nav-item nav-link" to="/login">
                 Login
               </NavLink>
-              <NavLink className="nav-item nav-link" to="/vidly/register">
+              <NavLink className="nav-item nav-link" to="/register">
                 Register
               </NavLink>
             </React.Fragment>
           )}
           {user && (
             <React.Fragment>
-              <NavLink className="nav-item nav-link" to="/vidly/profile">
+              <NavLink className="nav-item nav-link" to="/profile">
                 {user.name}
               </NavLink>
-              <NavLink className="nav-item nav-link" to="/vidly/logout">
+              <NavLink className="nav-item nav-link" to="/logout">
                 Logout
               </NavLink>
             </React.Fragment>

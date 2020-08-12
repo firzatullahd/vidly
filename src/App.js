@@ -31,23 +31,22 @@ class App extends Component {
       <NavBar user={user} />
       <main className="container">
         <Switch>
-          <Route path="/vidly/register" component={RegisterForm} />
-          <Route path="/vidly/login" component={LoginForm} />
-          <Route path="/vidly/logout" component={Logout} />
+          <Route path="/register" component={RegisterForm} />
+          <Route path="/login" component={LoginForm} />
+          <Route path="/logout" component={Logout} />
           <ProtectedRoute
-            path="/vidly/movies/:id"
+            path="/movies/:id"
             component={MovieForm}
           />
           <Route
-            path="/vidly/movies"
+            path="/movies"
             render={props => <Movies {...props} user={this.state.user} />}
           />
-          <Route path="/vidly/customers" component={Customers} />
-          <Route path="/vidly/rentals" component={Rentals} />
-          <Route path="/vidly/not-found" component={NotFound} />
-          <Redirect from="/" exact to="/vidly/movies" />
-          <Redirect from="/vidly" exact to="/vidly/movies" />
-          <Redirect to="/vidly/not-found" />
+          <Route path="/customers" component={Customers} />
+          <Route path="/rentals" component={Rentals} />
+          <Route path="/not-found" component={NotFound} />
+          <Redirect from="/" exact to="/movies" />
+          <Redirect to="/not-found" />
         </Switch>
 
       </main>
